@@ -1,11 +1,11 @@
 import React, { Component } from "react";
 
-import "./Books.css";
+import "./Book.css";
 
-export class Books extends Component {
+export class Book extends Component {
   render() {
     return <div></div>;
   }
 }
 
-export default Books;
+export default Book;

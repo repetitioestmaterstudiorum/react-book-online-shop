@@ -1,0 +1,102 @@
+/* flexbox content */
+.container {
+  display: flex; /* or inline-flex */
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+.container .item {
+  margin: 0 1% 2% 1%;
+}
+
+.book-info {
+  position: absolute;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+/* lightbox from https://codepen.io/iaian7/pen/KvveLr (heavily adapted) */
+.lightbox {
+  display: block;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.6);
+  visibility: hidden;
+  opacity: 0;
+  z-index: 10;
+}
+.lightbox img {
+  margin: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+.lightbox a {
+  color: #fff;
+}
+.lightbox:target {
+  visibility: visible;
+  opacity: 1;
+}
+.lightbox:target img {
+  max-width: 95%;
+  max-height: 82%;
+}
+.lightboxClose,
+.lightboxPrev,
+.lightboxNext {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.lightboxClose span,
+.lightboxPrev span,
+.lightboxNext span {
+  display: block;
+  position: absolute;
+  padding: 9px 13px;
+  color: white;
+  background-color: #272727;
+  width: 12px;
+}
+.lightboxClose span {
+  top: 2px;
+  right: 2px;
+}
+.lightboxPrev span {
+  top: 2px;
+  right: 82px;
+}
+.lightboxNext span {
+  top: 2px;
+  right: 42px;
+}
+.animate {
+  -webkit-transition: 0.25s ease-in-out;
+  -moz-transition: 0.25s ease-in-out;
+  -ms-transition: 0.25s ease-in-out;
+  -o-transition: 0.25s ease-in-out;
+  transition: 0.25s ease-in-out;
+}
+@media only screen and (min-width: 700px) {
+  .lightboxClose span {
+    top: 2px;
+    right: 2px;
+  }
+  .lightboxPrev span {
+    top: 62px;
+    right: 2px;
+  }
+  .lightboxNext span {
+    top: 122px;
+    right: 2px;
+  }
+  .lightbox:target img {
+    max-height: 95%;
+  }
+}
