@@ -1,0 +1,15 @@
+footer {
+  background-color: #dededecc;
+  height: 30px;
+  margin: 5px -10px 0 -10px;
+}
+footer span {
+  font-size: 0.9rem;
+}
+footer a {
+  color: rgb(28, 28, 28);
+}
+.site-notice {
+  margin: 0 auto;
+  width: fit-content;
+}
