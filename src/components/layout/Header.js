@@ -5,7 +5,7 @@ import "./Header.css";
 
 // search function from https://www.geeksforgeeks.org/search-bar-using-html-css-and-javascript/ (quite altered)
 const findContent = () => {
-  /*let input = document.getElementById("searchbar").value;
+  let input = document.getElementById("searchbar").value;
   input = input.toLowerCase();
   const indexedTitle = document.getElementsByClassName("indexedTitle");
   const indexedDesc = document.getElementsByClassName("indexedDesc");
@@ -18,7 +18,7 @@ const findContent = () => {
     } else {
       flipCards[i].style.display = "block";
     }
-  }*/
+  }
   console.log("findContent() triggered");
 };
 
