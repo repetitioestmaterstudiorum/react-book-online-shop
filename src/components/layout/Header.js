@@ -19,7 +19,7 @@ const findContent = () => {
       flipCards[i].style.display = "block";
     }
   }*/
-  console.log("findContent() (search function)");
+  console.log("findContent() triggered");
 };
 
 function Header() {
@@ -33,7 +33,7 @@ function Header() {
           <label htmlFor="searchbar">search: </label>
           <input
             id="searchbar"
-            onKeyUp={findContent()}
+            onKeyUp={findContent}
             type="text"
             name="search"
             placeholder="type.."

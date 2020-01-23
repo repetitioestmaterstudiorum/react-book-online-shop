@@ -4,7 +4,7 @@ import "./Book.css";
 
 export class Book extends Component {
   render() {
-    return <div></div>;
+    return <div>Helloo from Book.js</div>;
   }
 }
 
