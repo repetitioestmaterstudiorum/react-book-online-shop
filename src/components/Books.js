@@ -13,18 +13,23 @@ export class Books extends Component {
   componentDidMount() {
     axios
       .get("https://api.myjson.com/bins/zyv02")
-      .then(
-        response => (
-          this.setState({ books: response.data.books }),
-          console.log(response.data.books)
-        )
-      );
+      .then(response =>
+        response.data.books.map((book, index) => {
+          book.id = index;
+          return book;
+        })
+      )
+      .then(response => this.setState({ books: response }));
   }
 
   render() {
-    return this.state.books.map((book, index) => (
-      <Book key={index} book={book} />
-    ));
+    return (
+      <div id="contentSection" className="container">
+        {this.state.books.map((book, index) => (
+          <Book key={index} book={book} />
+        ))}
+      </div>
+    );
   }
 }
 
