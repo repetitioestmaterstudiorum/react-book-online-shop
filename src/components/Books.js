@@ -5,24 +5,6 @@ import axios from "axios";
 
 import "./Books.css";
 
-const buildHTML = data => {
-  console.log("buildHTML() triggered: ");
-  console.log(data);
-};
-
-// async function apiCall() {
-//   const url = "https://api.myjson.com/bins/zyv02";
-//   try {
-//     const response = await fetch(url);
-//     const data = await response.json();
-//     return data;
-//   } catch (err) {
-//     console.log(err);
-//   }
-// }
-// let data = [];
-// apiCall().then(result => ((data = result.books), buildHTML(data)));
-
 export class Books extends Component {
   state = {
     books: []
@@ -40,7 +22,9 @@ export class Books extends Component {
   }
 
   render() {
-    return this.state.books.map((book, id) => <Book key={id} book={book} />);
+    return this.state.books.map((book, index) => (
+      <Book key={index} book={book} />
+    ));
   }
 }
 
