@@ -44,7 +44,11 @@ export class Book extends Component {
           <a className="lightboxNext" href={"#img" + this.next}>
             <span> {">"} </span>
           </a>
-          <img className="animate" src={this.props.book.detail} />
+          <img
+            className="animate"
+            src={this.props.book.detail}
+            alt={this.props.book.title}
+          />
         </div>
       </React.Fragment>
     );
