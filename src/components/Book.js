@@ -21,10 +21,8 @@ export class Book extends Component {
             </div>
             <div className="flip-card-back">
               <div className="book-info">
-                <p className="title indexedTitle">{this.props.book.title}</p>
-                <p className="desc indexedDesc indexedContent">
-                  {this.props.book.description}
-                </p>
+                <p className="title">{this.props.book.title}</p>
+                <p className="desc">{this.props.book.description}</p>
                 <p>
                   <a className="button" href={"#img" + this.props.book.id}>
                     Large Cover

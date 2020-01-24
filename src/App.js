@@ -12,6 +12,7 @@ class App extends Component {
     books: []
   };
 
+  onloadState = {};
   componentDidMount() {
     axios
       .get("https://api.myjson.com/bins/zyv02")
@@ -21,13 +22,26 @@ class App extends Component {
           return book;
         })
       )
-      .then(response => this.setState({ books: response }));
+      .then(
+        response => (
+          this.setState({ books: response }), (this.onloadState = this.state)
+        )
+      );
   }
+
+  findContent = searchContent => {
+    this.state = this.onloadState;
+    this.setState({
+      books: this.state.books.filter(book =>
+        book.title.toLowerCase().includes(searchContent.toLowerCase())
+      )
+    });
+  };
 
   render() {
     return (
       <React.Fragment>
-        <Header />
+        <Header findContent={this.findContent} />
         <Books books={this.state.books} />
         <Footer />
       </React.Fragment>

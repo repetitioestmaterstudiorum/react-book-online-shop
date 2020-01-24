@@ -22,11 +22,10 @@ header {
 /* search */
 .search {
   margin-right: 25px;
-  text-align: center;
 }
-#searchbar {
-  padding: 10px;
-  border-radius: 10px;
+#searchBar {
+  padding: 7px;
+  border-radius: 6px;
 }
 input[type="text"] {
   width: 100%;
@@ -35,9 +34,10 @@ input[type="text"] {
   font-size: 1rem;
 }
 label {
-  padding-left: 25px;
-  color: #3a3a3a;
+  color: #3e3e3e;
   font-size: 1rem;
+  padding-left: 6px;
+  font-weight: bold;
 }
 @media only screen and (min-width: 700px) {
   header {
