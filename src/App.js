@@ -35,7 +35,10 @@ class App extends Component {
         .includes(searchContent.toLowerCase())
     );
     this.setState({
-      books: filteredBooks
+      books: filteredBooks.map((book, index) => {
+        book.id = index;
+        return book;
+      })
     });
   };
 
