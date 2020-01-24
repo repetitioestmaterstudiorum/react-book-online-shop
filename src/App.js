@@ -9,7 +9,8 @@ import "./App.css";
 
 class App extends Component {
   state = {
-    books: []
+    books: [],
+    initialBooks: []
   };
 
   onloadState = {};
@@ -22,29 +23,17 @@ class App extends Component {
           return book;
         })
       )
-      .then(
-        response => (
-          this.setState({ books: response }),
-          (this.onloadState = this.state) // // eslint-disable-next-line
-          // questions:
-          // 1. why is "// eslint-disable-next-line" not working
-          // 2. how else to do the same, elegantly
-        )
-      );
+      .then(response => this.setState({ initialBooks: response }));
   }
 
   findContent = searchContent => {
-    // this.setState({ books: this.onloadState.books });
-    // questions:
-    // 1. how to use setState in a working manner
-    // 2. is there a better way than setting an onload state manually?
-    this.state = this.onloadState;
+    const filteredBooks = this.state.initialBooks.filter(book =>
+      (book.description + book.title)
+        .toLowerCase()
+        .includes(searchContent.toLowerCase())
+    );
     this.setState({
-      books: this.state.books.filter(book =>
-        (book.description + book.title)
-          .toLowerCase()
-          .includes(searchContent.toLowerCase())
-      )
+      books: filteredBooks
     });
   };
 
@@ -52,7 +41,13 @@ class App extends Component {
     return (
       <React.Fragment>
         <Header findContent={this.findContent} />
-        <Books books={this.state.books} />
+        <Books
+          books={
+            this.state.books.length === 0
+              ? this.state.initialBooks
+              : this.state.books
+          }
+        />
         <Footer />
       </React.Fragment>
     );
