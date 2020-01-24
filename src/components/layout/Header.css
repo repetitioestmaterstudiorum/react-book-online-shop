@@ -1,3 +1,7 @@
+header {
+  height: 90px;
+}
+
 /* flexbox header */
 .container-header {
   display: flex; /* or inline-flex */
@@ -12,7 +16,7 @@
 .logo img {
   max-width: 150px;
   padding-right: 10px;
-  width: 90%;
+  margin-top: 13px;
 }
 
 /* search */
@@ -34,4 +38,13 @@ label {
   padding-left: 25px;
   color: #3a3a3a;
   font-size: 1rem;
+}
+@media only screen and (min-width: 700px) {
+  header {
+    height: 100px;
+  }
+  .logo img {
+    max-width: 250px;
+    margin-top: 0;
+  }
 }
