@@ -24,7 +24,8 @@ class App extends Component {
       )
       .then(
         response => (
-          this.setState({ books: response }), (this.onloadState = this.state)
+          this.setState({ books: response }),
+          (this.onloadState = this.state) // eslint-disable-line no-console
         )
       );
   }
@@ -33,7 +34,9 @@ class App extends Component {
     this.state = this.onloadState;
     this.setState({
       books: this.state.books.filter(book =>
-        book.title.toLowerCase().includes(searchContent.toLowerCase())
+        (book.description + book.title)
+          .toLowerCase()
+          .includes(searchContent.toLowerCase())
       )
     });
   };

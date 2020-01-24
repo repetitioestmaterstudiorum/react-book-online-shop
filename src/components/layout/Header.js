@@ -24,7 +24,7 @@ export class Header extends Component {
               onChange={this.handleOnChange}
               type="text"
               name="searchBar"
-              placeholder="type.."
+              placeholder="book title or description"
             />
           </div>
         </div>
