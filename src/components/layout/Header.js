@@ -27,7 +27,9 @@ function Header() {
     <header>
       <div className="container-header">
         <div className="logo item">
-          <img src={Logo} alt="Ubiqum Books Logo" />
+          <a href="/">
+            <img src={Logo} alt="Ubiqum Books Logo" />
+          </a>
         </div>
         <div className="search item">
           <label htmlFor="searchbar">search: </label>
