@@ -25,12 +25,19 @@ class App extends Component {
       .then(
         response => (
           this.setState({ books: response }),
-          (this.onloadState = this.state) // eslint-disable-line no-console
+          (this.onloadState = this.state) // // eslint-disable-next-line
+          // questions:
+          // 1. why is "// eslint-disable-next-line" not working
+          // 2. how else to do the same, elegantly
         )
       );
   }
 
   findContent = searchContent => {
+    // this.setState({ books: this.onloadState.books });
+    // questions:
+    // 1. how to use setState in a working manner
+    // 2. is there a better way than setting an onload state manually?
     this.state = this.onloadState;
     this.setState({
       books: this.state.books.filter(book =>
