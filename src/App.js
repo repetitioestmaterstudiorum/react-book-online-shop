@@ -1,3 +1,5 @@
+// known issue: when the view is filtered, the next and previous buttons might show nothing at all
+
 import React, { Component } from "react";
 import Header from "./components/layout/Header";
 import Books from "./components/Books";
