@@ -14,7 +14,7 @@ export class Header extends Component {
         <div className="container-header">
           <div className="logo item">
             <a href="/">
-              <img src={Logo} alt="Ubiqum Books Logo" />
+              <img src={Logo} alt="React Books Logo" />
             </a>
           </div>
           <div className="search item">

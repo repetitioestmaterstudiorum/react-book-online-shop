@@ -7,7 +7,7 @@ export default function Footer() {
     <footer>
       <div>
         <span>
-          Site notice: This is a demo page! Contact:
+          Site notice: This is a demo page! Contact:{" "}
           <a
             href="https://sunyamare.ch/"
             target="_blank"
