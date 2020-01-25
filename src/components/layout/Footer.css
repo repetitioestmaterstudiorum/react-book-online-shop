@@ -1,20 +1,21 @@
 footer {
-  background-color: #dededecc;
-  height: auto;
-  margin: 5px -10px 0 -10px;
-  padding: 0 10px;
+    background-color: #121212cc;
+    height: auto;
+    margin: 5px -10px 0 -10px;
+    padding: 0 10px;
 }
 footer div {
-  margin: auto;
-  width: fit-content;
+    margin: auto;
+    width: fit-content;
 }
 footer span {
-  font-size: 0.9rem;
+    font-size: 0.9rem;
+    color: #f4f4f4;
 }
 footer a {
-  color: rgb(28, 28, 28);
+    color: #fff;
 }
 .site-notice {
-  margin: 0 auto;
-  width: fit-content;
+    margin: 0 auto;
+    width: fit-content;
 }
