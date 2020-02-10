@@ -25,13 +25,11 @@ class App extends Component {
   }
 
   findContent = searchContent => {
-    console.log(searchContent);
     const filteredBooks = this.state.initialBooks.filter(book =>
       (book.description + book.title)
         .toLowerCase()
         .includes(searchContent.toLowerCase())
     );
-    console.log(filteredBooks);
     this.setState({
       books: filteredBooks.map((book, index) => {
         book.id = index;
