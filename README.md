@@ -1,8 +1,6 @@
 # React Books Online Shop
 
-The app fetches images from an API and displays them with a lightbox feature.
-
-React version of https://github.com/sunyamare/ubiqum-book-catalog
+The app fetches images from an API and displays them with a lightbox feature. It's a PWA.
 
 ## install and use
 
