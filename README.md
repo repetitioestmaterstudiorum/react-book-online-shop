@@ -1,4 +1,4 @@
-# React Books Online Shop
+# React Books Online Shop Catalog
 
 The app fetches images from an API and displays them with a lightbox feature. It's a PWA.
 
